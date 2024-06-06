@@ -1,0 +1,56 @@
+.border {
+  border: 2px solid red;
+  margin: 3px;
+}
+.flex {
+  display: flex;
+}
+.content-center {
+  justify-content: center;
+}
+.items-center {
+  align-items: center;
+}
+.bg-black {
+  background-color: black;
+  color: white;
+}
+.bg-grey {
+  background-color: #121212;
+}
+.invert {
+  filter: invert(1);
+}
+.rounded {
+  border-radius: 7px;
+}
+.m-1 {
+  margin: 5px;
+}
+.p-1 {
+  padding: 10px;
+}
+
+.card-containers::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.card-containers::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #00e300);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #00e300);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #008b00);
+  border-radius: 6px;
+}

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="utility.css" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Spotify-Clone</title>
+</head>
+
+<body>
+  <div class="container flex bg-black">
+    <div class="left">
+      <div class="cross">
+        <img src="cross.svg" alt="">
+      </div>
+      <div class="home bg-grey rounded m-1 p-1">
+        <div class="logo"><img class="invert" width="120px" src="logo.svg" alt="" /></div>
+        <ul>
+          <li class="flex">
+            <img class="invert" src="home.svg" alt="home" />Home
+          </li>
+          <li class="flex">
+            <img class="invert" src="search.svg" alt="search" />Search
+          </li>
+        </ul>
+      </div>
+      <div class="library bg-grey rounded p-1">
+        <div class="heading flex">
+          <div class="left-lib flex">
+            <img class="invert" src="library.svg" alt="" />
+            <h2>Your library</h2>
+          </div>
+
+          <div class="right">
+            <img src="plus.svg" class="invert" alt="create playlist" />
+          </div>
+        </div>
+        <div class="songsList">
+          <ul>
+
+          </ul>
+        </div>
+        <div class="footer">
+          <div class="first">
+            <div class="m-right">
+              <a href="https://www.spotify.com/in-en/legal/" id="" data-encore-id="textLink">
+                <span data-encore-id="type">Legal</span>
+              </a>
+            </div>
+            <div class="m-right">
+              <a href="https://www.spotify.com/in-en/safetyandprivacy/" id="" data-encore-id="textLink">
+                <span data-encore-id="type">Safety &amp; Privacy Center</span>
+              </a>
+            </div>
+            <div class="m-right">
+              <a href="https://www.spotify.com/in-en/legal/privacy-policy/" id="" data-encore-id="textLink">
+                <span data-encore-id="type">Privacy Policy</span>
+              </a>
+            </div>
+            <div class="m-right">
+              <a href="https://www.spotify.com/in-en/legal/cookies-policy/" id="" data-encore-id="textLink">
+                <span data-encore-id="type">Cookies</span>
+              </a>
+            </div>
+            <div class="m-right">
+              <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3" id="" data-encore-id="textLink">
+                <span data-encore-id="type">About Ads</span>
+              </a>
+            </div>
+            <div class="m-right access">
+              <a href="https://www.spotify.com/in-en/accessibility/" id="" data-encore-id="textLink">
+                <span data-encore-id="type">Accessibility</span>
+              </a>
+            </div>
+            <div class="m-right">
+              <a href="https://www.spotify.com/in-en/legal/cookies-policy/" id="" data-encore-id="textLink">
+                <span data-encore-id="type">Cookies</span>
+              </a>
+            </div>
+
+          </div>
+          <div class="drop-box">
+            <img class="invert" src="earth.svg" alt="" />
+            <p>English</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right bg-grey rounded p-1">
+      <div class="home">
+        <div class="header">
+          <div class="nav">
+            <div class="hamburgerContainer">
+              <img  class=" hamburger"  src="hamburger.svg" alt="">
+            <img class="invert" src="https://cdn.hugeicons.com/icons/arrow-left-01-stroke-rounded.svg"
+              alt="arrow-left-01" width="24" height="24" />
+            <img class="invert" src="https://cdn.hugeicons.com/icons/arrow-right-01-stroke-rounded.svg"
+              alt="arrow-right-01" width="24" height="24" />
+            </div>
+          </div>
+          <div class="buttons">
+            <button id="sign">Sign <span>up</span></button>
+            <button id="log">Log <span>in</span></button>
+          </div>
+        </div>
+        <div class="SpotifyPlaylists">
+          <h1>Spotify Playlists</h1>
+          <div class="card-containers">
+            <div class="card" data-folder="Honey">
+              <img src="https://i2o.scdn.co/image/ab67706c0000cfa37eec11b2317228d59dbfe57b" alt="Call Aundi"
+                class="card-img" />
+              <button aria-label="Play" class="play-button">
+                <svg viewBox="0 0 24 24" class="play-icon">
+                  <path
+                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
+                  </path>
+                </svg>
+              </button>
+              <h2>Best of Honey Singh</h2>
+             </div>
+
+            <div class="card" data-folder="Arijit">
+              <img src="https://i.scdn.co/image/ab676161000051740261696c5df3be99da6ed3f3" alt="" class="card-img"
+                class="card-img" />
+              <button aria-label="Play" class="play-button">
+                <svg viewBox="0 0 24 24" class="play-icon">
+                  <path
+                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
+                  </path>
+                </svg>
+              </button>
+              <h2>Best of Arijit Singh</h2>
+              <p>Song By Arijit Singh</p>
+            </div>
+
+            <div class="card" data-folder="Shreya">
+              <img src="https://pbs.twimg.com/profile_images/1628297232364736513/STfbQ-o-_400x400.jpg"
+                class="card-img" />
+              <button aria-label="Play" class="play-button">
+                <svg viewBox="0 0 24 24" class="play-icon">
+                  <path
+                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
+                  </path>
+                </svg>
+              </button>
+              <h2>Best of Shreya Ghosal</h2>
+              <p>Song By Akash Das</p>
+            </div>
+
+            <div class="card" data-folder="Salman">
+              <img src="https://i.scdn.co/image/ab676161000051748e8f4609471349b4bfdbf774" class="card-img" />
+              <button aria-label="Play" class="play-button">
+                <svg viewBox="0 0 24 24" class="play-icon">
+                  <path
+                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
+                  </path>
+                </svg>
+              </button>
+              <h2>Best of Salman Khan</h2>
+              <p>Song. By Akash Das</p>
+            </div>
+
+            <div class="card " data-folder="Darshan">
+              <img src="https://i2o.scdn.co/image/ab67706c0000cfa3b22b04e9015abc8f93255787" 
+                class="card-img" />
+              <button aria-label="Play" class="play-button">
+                <svg viewBox="0 0 24 24" class="play-icon">
+                  <path
+                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
+                  </path>
+                </svg>
+              </button>
+              <h2>Best of Darshan Raval</h2>
+              <p>Song. By Akash Das</p>
+            </div>
+
+            <div class="card" data-folder="Kishore">
+
+              <img
+                src="https://yt3.googleusercontent.com/VzKX7I0iD2eEHoWqk2drqOTFsPWX6hTGul0drSXXde8hWEcYNq7H_VdWHBC5RDawV_LoUBmD=s900-c-k-c0x00ffffff-no-rj"
+                /class="card-img">
+              <button aria-label="Play" class="play-button">
+                <svg viewBox="0 0 24 24" class="play-icon">
+                  <path
+                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
+                  </path>
+                </svg>
+              </button>
+              <h2>Best of Kishore Kumar</h2>
+              <p>Song. By Akash Das</p>
+            </div>
+            <div class="card" data-folder="Sanam">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6ajZRV_4V-ZlLKkr0OLJWlz1myu6mRs3FnEQpDs10Nw&s"
+                alt="Swag se Swagat" class="card-img" />
+              <button aria-label="Play" class="play-button">
+                <svg viewBox="0 0 24 24" class="play-icon">
+                  <path
+                    d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
+                  </path>
+                </svg>
+              </button>
+              <h2>Best of Sanam Puri</h2>
+              <p>Song. By Akash Das</p>
+            </div>
+          </div>
+          <div class="playbar">
+
+            <div class="abovebar">
+              <div class="songinfo">
+
+              </div>
+              <div class="songbuttons">
+                <div class="shuffle">
+
+                  <img src="shuffle.svg" id="shuffleon">
+                </div>
+                <img id="previous" class="invert" src="https://cdn.hugeicons.com/icons/previous-stroke-rounded.svg"
+                  alt="previous" width="24" height="24" />
+                <img id="play" class="invert" src="play.svg" alt="play" width="24" height="24" />
+                <img id="next" class="invert" src="https://cdn.hugeicons.com/icons/next-stroke-rounded.svg" alt="next"
+                  width="24" height="24" />
+                <img src="loop.svg" alt="" id="loop">
+              </div>
+              <div class="timevol">
+
+
+                <div class="songtime">
+
+                </div>
+                <div class="volume-bar">
+                    <img src="volume.svg" alt="" id="volumerocker">
+                 
+                  <div class="range">
+                    <input type="range">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="seekbar-container">
+              <div class="seekbar-track" id="seekbar-track">
+                <div class="seekbar-fill" id="seekbar-fill"></div>
+                <div class="seekbar-thumb" id="seekbar-thumb"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <!-- <script src="script2.js"></script> -->
+</body>
+
+</html>
