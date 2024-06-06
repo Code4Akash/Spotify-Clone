@@ -280,7 +280,7 @@ function formatTime(seconds) {
 async function getSongs(folder) {
   currFolder = folder;
   try {
-    let response = await fetch(`http://127.0.0.1:5500/${folder}/`);
+    let response = await fetch(`${folder}/`);
     let text = await response.text();
     let div = document.createElement("div");
     div.innerHTML = text;
@@ -336,50 +336,7 @@ function PlayMusic(index, pause = false) {
   document.querySelector(".songtime").innerHTML = "00:00/00:00";
 }
 
-async function DisplayAlbums() {
-  try {
-    let a = await fetch(`http://127.0.0.1:5500/songs/`);
-    let response = await a.text();
-    let div = document.createElement("div");
-    div.innerHTML = response;
 
-    let anchors = document.getElementsByTagName("a");
-    Array.from(anchors).forEach(async (e) => {
-      if (e.href.includes("/songs")) {
-        let folder = e.href.split("/").slice(-2)[0];
-
-        try {
-          // Get the meta data of the folder
-          let meta = await fetch(`http://127.0.0.1:5500/${folder}/info.json`);
-          let metaResponse = await meta.json();
-          console.log(metaResponse);
-
-          // Update card containers' innerHTML correctly
-          let cardContainers = document.querySelector(".card-containers"); // Ensure you have an element with this class
-          if (cardContainers) {
-            cardContainers.innerHTML += `
-              <div class="card" data-folder="${folder}">
-                <img src="/songs/${folder}/cover.jpg" alt="${metaResponse.title}" class="card-img" />
-                <button aria-label="Play" class="play-button">
-                  <svg viewBox="0 0 24 24" class="play-icon">
-                    <path d="M7.05 3.606L20.54 11.394a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path>
-                  </svg>
-                </button>
-                <h2>${metaResponse.title}</h2>
-                <p>${metaResponse.description}</p>
-              </div>`;
-          } else {
-            console.error("Card container element not found.");
-          }
-        } catch (error) {
-          console.error(`Failed to fetch metadata for folder: ${folder}`, error);
-        }
-      }
-    });
-  } catch (error) {
-    console.error("Failed to fetch the list of songs.", error);
-  }
-}
 
 // Call the function to display the albums
 DisplayAlbums();
